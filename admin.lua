@@ -262,10 +262,10 @@ local function ch_revive(player,choice)
                     SetTimeout(1000, function()
                         vRPclient.varyHealth(nplayer,{200})
                     end)
-                    vRPclient.notify(nplayer,{"Ai primit revive de la ~g~"..GetPlayerName(player)})
-                    vRPclient.notify(player,{"~g~"..GetPlayerName(nplayer).." ~w~ti-a dat revive"})
+                    vRPclient.notify(nplayer,{"You have received revive from ~g~"..GetPlayerName(player)})
+                    vRPclient.notify(player,{"~g~"..GetPlayerName(nplayer).." ~w~gave you life"})
                 else
-                    vRPclient.notify(player,{"Jucatorul nu e mort!"})
+                    vRPclient.notify(player,{"Player not died!"})
                 end
             end)
         else
@@ -471,35 +471,35 @@ vRP.registerMenuBuilder("main", function(add, data)
         menu.onclose = function(player) vRP.openMainMenu(player) end -- nest menu
 		
 		if vRP.hasPermission(user_id,"player.groupadd2") then
-		  menu["Adauga in factiune"] = {ch_addgroup2}
+		  menu["Add to faction"] = {ch_addgroup2}
 		end
 		
 		if vRP.hasPermission(user_id,"player.groupremove2") then
-		  menu["Scoate din factiune"] = {ch_removegroup2}
+		  menu["Get out of the faction"] = {ch_removegroup2}
 		end
 		
 		if vRP.hasPermission(user_id,"player.groupadd3") then
-		  menu["Adauga in factiune"] = {ch_addgroup3}
+		  menu["Add to faction"] = {ch_addgroup3}
 		end
 		
 		if vRP.hasPermission(user_id,"player.groupremove3") then
-		  menu["Scoate din factiune"] = {ch_removegroup3}
+		  menu["Get out of the faction"] = {ch_removegroup3}
 		end
 		
 		if vRP.hasPermission(user_id,"player.groupadd4") then
-		  menu["Adauga in factiune"] = {ch_addgroup4}
+		  menu["Add to faction"] = {ch_addgroup4}
 		end
 		
 		if vRP.hasPermission(user_id,"player.groupremove4") then
-		  menu["Scoate din factiune"] = {ch_removegroup4}
+		  menu["Get out of the faction"] = {ch_removegroup4}
 		end
 		
 		if vRP.hasPermission(user_id,"player.groupadd5") then
-		  menu["Adauga in factiune"] = {ch_addgroup5}
+		  menu["Add to faction"] = {ch_addgroup5}
 		end
 		
 		if vRP.hasPermission(user_id,"player.groupremove5") then
-		  menu["Scoate din factiune"] = {ch_removegroup5}
+		  menu["Get out of the faction"] = {ch_removegroup5}
 		end
 		
 		  vRP.openMenu(player,menu)
